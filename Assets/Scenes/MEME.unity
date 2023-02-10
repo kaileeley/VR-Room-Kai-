@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 235308787}
   - component: {fileID: 235308789}
   - component: {fileID: 235308788}
+  - component: {fileID: 235308790}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -1100,7 +1101,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 1
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1161,6 +1162,65 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!114 &235308790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235308782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d337e8bc7ac4498e0df29e7b8bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e9cf2902-0830-4919-bcc0-fb3f96591383
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 52e9ed17-112d-4c07-8c51-a6d744eb6ce8
+      m_Path: <XRController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357301929}
+        m_TargetAssemblyTypeName: ToggleRay, Assembly-CSharp
+        m_MethodName: ActivateRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357301929}
+        m_TargetAssemblyTypeName: ToggleRay, Assembly-CSharp
+        m_MethodName: DeactivateRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &254896866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1816,7 +1876,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 1
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -3297,7 +3357,7 @@ MonoBehaviour:
       m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 6063a4a1-35fd-4277-a723-966f6d530fff
+      m_Id: 457de644-35a4-44d3-b6e1-15aef5d5de55
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3321,7 +3381,7 @@ MonoBehaviour:
       m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d370ed4e-c9a3-4952-992d-292f4a2ca7b6
+      m_Id: 40aa548c-0b5a-457a-a4b3-83556aea2c5f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3345,7 +3405,7 @@ MonoBehaviour:
       m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d9c1f108-14aa-4ac8-ae36-52639c4a43cd
+      m_Id: 9633b3b1-c176-4386-8f93-be019ed16d3a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3369,7 +3429,7 @@ MonoBehaviour:
       m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 3602da1d-84b7-4f46-a2e1-120462637269
+      m_Id: 61be3f2f-2c0b-4494-8fb3-45d29ff598df
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4525,6 +4585,7 @@ GameObject:
   - component: {fileID: 1357301927}
   - component: {fileID: 1357301926}
   - component: {fileID: 1357301925}
+  - component: {fileID: 1357301929}
   m_Layer: 0
   m_Name: LeftHand Ray
   m_TagString: Untagged
@@ -4913,7 +4974,7 @@ MonoBehaviour:
       m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: bfa76f78-981f-4910-a59b-0758e56917f3
+      m_Id: abeb5f8d-8001-4bfa-ba4c-b4b21086f450
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4937,7 +4998,7 @@ MonoBehaviour:
       m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 635b4711-59ee-4895-8a20-4fc6e728a205
+      m_Id: 5bee6d01-b42e-4db7-a191-8abe877be247
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4961,7 +5022,7 @@ MonoBehaviour:
       m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1fd0cf20-5215-4bfb-9b51-9460f879759f
+      m_Id: f5116bcf-66c3-4760-8e97-e5d287a8b8b1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4985,7 +5046,7 @@ MonoBehaviour:
       m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: a63bc029-d872-49ba-a655-5d78d87a9968
+      m_Id: 6889ecbc-4891-4d09-9546-5b8deb0c1bdb
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5028,6 +5089,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1357301929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357301923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf14522d53cc1594991c164e785780dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceToggle: 0
+  directInteractor: {fileID: 235308789}
 --- !u!1001 &1372356024
 PrefabInstance:
   m_ObjectHideFlags: 0
